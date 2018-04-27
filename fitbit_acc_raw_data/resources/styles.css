@@ -1,0 +1,44 @@
+.background {
+  viewport-fill: black;
+}
+
+.panelTitle {
+  font-size: 35;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 50;
+  fill: white;
+}
+
+.panelText {
+  font-size: 20;
+  font-family: System-Bold;
+  text-length: 512;
+  width: 100%-10;
+  x: 10;
+  y: 60;
+  fill: white;
+}
+
+#sizeLabel {
+  font-size: 25;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 90;
+  fill: white;
+}
+
+#statusLabel {
+  font-size: 25;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 240;
+  fill: white;
+}
+

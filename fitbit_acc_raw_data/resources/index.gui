@@ -1,0 +1,68 @@
+<svg class="background" >
+  <symbol id="mytile" focusable="true">
+    <!-- tile content here -->
+    <rect class="stuff" />
+    <text id="sampleText" fill="white" >Hello World!</text>
+  </symbol>
+  
+  <!--- definitiopn of the multi-panel navigator --->
+  <symbol id='multi-panel-panorama'>
+    <use id='container' href='#panoramaview' overflow='hidden'>
+
+      <!--- Main logger window --->
+      <use id="main" href="#panoramaview-item">
+        <text id="titleLoggerLabel" class="panelTitle"/>
+        <text id="sizeLabel" />
+        <svg y="100">
+          <!-- toggle button OFF -->
+          <use id="loggingOffButton" href="#square-button-toggle" value="1" fill="fb-light-gray" height="120">
+            <set href="#text" attributeName="text-buffer" to="Off" />
+          </use>
+          <!-- toggle button ON -->
+          <use id="loggingOnButton" href="#square-button-toggle" x="50%" fill="fb-green" height="120">
+            <set href="#text"  attributeName="text-buffer" to="On" />
+          </use>
+        </svg>
+        <text id="statusLabel" />
+      </use>
+      
+      <!--- Panel showing the recordings in the watch --->
+      <use id="info-watch" href="#panoramaview-item">
+        <text id="titleRecordingsInWatchLabel" class="panelTitle" />
+        <textarea id="recordingsInWatchText" class="panelText">
+        </textarea>
+      </use>        
+
+      <!--- Panel showing the recordings in the phone --->
+      <use id="info-phone" href="#panoramaview-item">
+        <text id="titleRecordingsInPhoneLabel" class="panelTitle"/>
+        <textarea id="recordingsInPhoneText" class="panelText">
+        </textarea>
+      </use>        
+
+      <!--- Panel showing the recordings in the server --->
+      <use id="info-server" href="#panoramaview-item">
+        <text id="titleRecordingsInServerLabel" class="panelTitle"/>
+        <textarea id="recordingsInServerText" class="panelText">
+        </textarea>
+      </use>        
+
+      <!-- Have enough dots for your slides (extras are hidden) -->
+      <use id='pagination-dots' class='pagination' href='#pagination-widget' y='5'>
+        <use href='#pagination-dot'/>
+        <use href='#pagination-dot'/>
+        <use href='#pagination-dot'/>
+        <use href='#pagination-dot'/>
+        <use href='#pagination-dot'/>
+        <use href='#pagination-highlight-dot'/>
+      </use>
+
+    </use>
+  </symbol>
+
+  <!--- Using all --->
+  <svg>
+    <use id="all-panels" href="#multi-panel-panorama" />
+  </svg>
+
+</svg>
